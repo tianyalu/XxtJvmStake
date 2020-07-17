@@ -10,7 +10,7 @@
 
 `J2EE`总体体系结构如下图所示：  
 
-![image](https://github.com/tianyalu/XxtJvmStake/raw/master/show/j233_structure.png)  
+![image](https://github.com/tianyalu/XxtJvmStake/raw/master/show/j2ee_structure.png)  
 
 ### 1.2 `JVM`虚拟机
 
@@ -209,15 +209,15 @@ static class MyClassVisitor extends ClassVisitor {
     super(api, classVisitor);
   }
 
-	/**
- 	 * 每读取到一个方法的时候，都会执行下面的方法
- 	 * @param access
- 	 * @param name
- 	 * @param descriptor
- 	 * @param signature
- 	 * @param exceptions
- 	 * @return
-	 */
+/**
+	* 每读取到一个方法的时候，都会执行下面的方法
+	* @param access
+	* @param name
+	* @param descriptor
+	* @param signature
+	* @param exceptions
+	* @return
+	*/
   @Override
   public MethodVisitor visitMethod(int access, String name, String descriptor, String signature, String[] exceptions) {
     MethodVisitor methodVisitor = super.visitMethod(access, name, descriptor, signature, exceptions);
